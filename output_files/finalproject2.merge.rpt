@@ -1,0 +1,428 @@
+Partition Merge report for finalproject2
+Tue Nov 22 18:55:37 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Rapid Recompile Summary
+  5. Partition Merge Rapid Recompile Table of Changed Logic Entities
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                           ;
++---------------------------------+-------------------------------------------------+
+; Partition Merge Status          ; Successful - Tue Nov 22 18:55:37 2016           ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                   ; finalproject2                                   ;
+; Top-level Entity Name           ; finalproject2                                   ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; 73 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 86                                              ;
+; Total pins                      ; 59 / 457 ( 13 % )                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 57,600 / 4,065,280 ( 1 % )                      ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                                   ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used        ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Hybrid (Rapid Recompile) ; Source File            ;                                ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File              ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Rapid Recompile Summary                                                                                                                                                                                    ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+; Partition Name                 ; Rapid Recompile Status ; Netlist Preservation Requested ; Netlist Preservation Achieved ; Notes                                                                                           ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+; Top                            ; Engaged                ; 73.01% (238 / 326)             ; 73.01% (238 / 326)            ;                                                                                                 ;
+; hard_block:auto_generated_inst ; Disengaged             ; 44.44% (4 / 9)                 ; 0.00% (0 / 9)                 ; Rapid Recompile disengaged: Rapid Recompile does not preserve a modified hard_block partition.  ;
++--------------------------------+------------------------+--------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Rapid Recompile Table of Changed Logic Entities                                                                         ;
++---------------------------------------------------------------------------------------------------------------+-------------------------+
+; Changed Logic Entities                                                                                        ; Number of Changed Nodes ;
++---------------------------------------------------------------------------------------------------------------+-------------------------+
+; |finalproject2|xy_plot_control:xy_plot_controller                                                             ; 64                      ;
+; |finalproject2|LFSR8:lfsrX                                                                                    ; 18                      ;
+; |finalproject2|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_m6m1:auto_generated                          ; 18                      ;
+; |finalproject2                                                                                                ; 17                      ;
+; |finalproject2|LFSR7:lfsrY                                                                                    ; 16                      ;
+; |finalproject2|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator         ; 10                      ;
+; |finalproject2|LFSR3:lsfrCOLOUR                                                                               ; 8                       ;
+; |finalproject2|vga_adapter:VGA|vga_address_translator:user_input_translator                                   ; 8                       ;
+; |finalproject2|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_m6m1:auto_generated|decode_01a:rden_decode_b ; 6                       ;
+; |finalproject2|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                ; 2                       ;
+; |finalproject2                                                                                                ; 5                       ;
+; |finalproject2|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                ; 2                       ;
++---------------------------------------------------------------------------------------------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                                                                 ;
++---------------------------+-----------+---------------+--------------------+---------------------------------------------+
+; Name                      ; Partition ; Type          ; Location           ; Status                                      ;
++---------------------------+-----------+---------------+--------------------+---------------------------------------------+
+; CLOCK_50                  ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- CLOCK_50           ; Top       ; Input Pad     ; Unplaced           ; Synthesized                                 ;
+;     -- CLOCK_50~input     ; Top       ; Input Buffer  ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; KEY[0]                    ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- KEY[0]             ; Top       ; Input Pad     ; IOPAD_X36_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- KEY[0]~input       ; Top       ; Input Buffer  ; IOIBUF_X36_Y0_N1   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; KEY[1]                    ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- KEY[1]             ; Top       ; Input Pad     ; Unplaced           ; Synthesized                                 ;
+;     -- KEY[1]~input       ; Top       ; Input Buffer  ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; KEY[2]                    ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- KEY[2]             ; Top       ; Input Pad     ; IOPAD_X40_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- KEY[2]~input       ; Top       ; Input Buffer  ; IOIBUF_X40_Y0_N1   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; KEY[3]                    ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- KEY[3]             ; Top       ; Input Pad     ; IOPAD_X40_Y0_N17   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- KEY[3]~input       ; Top       ; Input Buffer  ; IOIBUF_X40_Y0_N18  ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[0]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[0]            ; Top       ; Output Pad    ; IOPAD_X52_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[0]~output     ; Top       ; Output Buffer ; IOOBUF_X52_Y0_N2   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[1]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[1]            ; Top       ; Output Pad    ; IOPAD_X52_Y0_N17   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[1]~output     ; Top       ; Output Buffer ; IOOBUF_X52_Y0_N19  ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[2]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[2]            ; Top       ; Output Pad    ; IOPAD_X60_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[2]~output     ; Top       ; Output Buffer ; IOOBUF_X60_Y0_N2   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[3]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[3]            ; Top       ; Output Pad    ; IOPAD_X80_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[3]~output     ; Top       ; Output Buffer ; IOOBUF_X80_Y0_N2   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[4]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[4]            ; Top       ; Output Pad    ; IOPAD_X60_Y0_N17   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[4]~output     ; Top       ; Output Buffer ; IOOBUF_X60_Y0_N19  ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[5]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[5]            ; Top       ; Output Pad    ; IOPAD_X80_Y0_N17   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[5]~output     ; Top       ; Output Buffer ; IOOBUF_X80_Y0_N19  ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[6]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[6]            ; Top       ; Output Pad    ; IOPAD_X84_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[6]~output     ; Top       ; Output Buffer ; IOOBUF_X84_Y0_N2   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[7]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[7]            ; Top       ; Output Pad    ; IOPAD_X89_Y6_N3    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[7]~output     ; Top       ; Output Buffer ; IOOBUF_X89_Y6_N5   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; LEDR[8]                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- LEDR[8]            ; Top       ; Output Pad    ; IOPAD_X89_Y8_N3    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- LEDR[8]~output     ; Top       ; Output Buffer ; IOOBUF_X89_Y8_N5   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[0]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[0]              ; Top       ; Input Pad     ; IOPAD_X12_Y0_N17   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[0]~input        ; Top       ; Input Buffer  ; IOIBUF_X12_Y0_N18  ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[1]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[1]              ; Top       ; Input Pad     ; IOPAD_X16_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[1]~input        ; Top       ; Input Buffer  ; IOIBUF_X16_Y0_N1   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[2]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[2]              ; Top       ; Input Pad     ; IOPAD_X8_Y0_N34    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[2]~input        ; Top       ; Input Buffer  ; IOIBUF_X8_Y0_N35   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[3]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[3]              ; Top       ; Input Pad     ; IOPAD_X4_Y0_N51    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[3]~input        ; Top       ; Input Buffer  ; IOIBUF_X4_Y0_N52   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[4]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[4]              ; Top       ; Input Pad     ; IOPAD_X2_Y0_N40    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[4]~input        ; Top       ; Input Buffer  ; IOIBUF_X2_Y0_N41   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[5]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[5]              ; Top       ; Input Pad     ; IOPAD_X16_Y0_N17   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[5]~input        ; Top       ; Input Buffer  ; IOIBUF_X16_Y0_N18  ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[6]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[6]              ; Top       ; Input Pad     ; IOPAD_X4_Y0_N34    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[6]~input        ; Top       ; Input Buffer  ; IOIBUF_X4_Y0_N35   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[7]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[7]              ; Top       ; Input Pad     ; IOPAD_X4_Y0_N0     ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[7]~input        ; Top       ; Input Buffer  ; IOIBUF_X4_Y0_N1    ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[8]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[8]              ; Top       ; Input Pad     ; IOPAD_X4_Y0_N17    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[8]~input        ; Top       ; Input Buffer  ; IOIBUF_X4_Y0_N18   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; SW[9]                     ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- SW[9]              ; Top       ; Input Pad     ; IOPAD_X2_Y0_N57    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- SW[9]~input        ; Top       ; Input Buffer  ; IOIBUF_X2_Y0_N58   ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_BLANK_N               ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_BLANK_N        ; Top       ; Output Pad    ; IOPAD_X6_Y81_N17   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- VGA_BLANK_N~output ; Top       ; Output Buffer ; IOOBUF_X6_Y81_N19  ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[0]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[0]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[0]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[1]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[1]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[1]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[2]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[2]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[2]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[3]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[3]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[3]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[4]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[4]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[4]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[5]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[5]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[5]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[6]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[6]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[6]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[7]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[7]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[7]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[8]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[8]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[8]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_B[9]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_B[9]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_B[9]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_CLK                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_CLK            ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_CLK~output     ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[0]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[0]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[0]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[1]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[1]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[1]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[2]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[2]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[2]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[3]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[3]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[3]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[4]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[4]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[4]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[5]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[5]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[5]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[6]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[6]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[6]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[7]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[7]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[7]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[8]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[8]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[8]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_G[9]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_G[9]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_G[9]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_HS                    ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_HS             ; Top       ; Output Pad    ; IOPAD_X36_Y81_N51  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- VGA_HS~output      ; Top       ; Output Buffer ; IOOBUF_X36_Y81_N53 ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[0]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[0]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[0]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[1]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[1]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[1]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[2]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[2]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[2]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[3]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[3]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[3]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[4]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[4]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[4]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[5]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[5]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[5]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[6]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[6]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[6]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[7]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[7]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[7]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[8]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[8]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[8]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_R[9]                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_R[9]           ; Top       ; Output Pad    ; Unplaced           ; Synthesized                                 ;
+;     -- VGA_R[9]~output    ; Top       ; Output Buffer ; Unplaced           ; Synthesized                                 ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_SYNC_N                ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_SYNC_N         ; Top       ; Output Pad    ; IOPAD_X28_Y81_N34  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- VGA_SYNC_N~output  ; Top       ; Output Buffer ; IOOBUF_X28_Y81_N36 ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
+; VGA_VS                    ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- VGA_VS             ; Top       ; Output Pad    ; IOPAD_X34_Y81_N40  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- VGA_VS~output      ; Top       ; Output Buffer ; IOOBUF_X34_Y81_N42 ; Preserved from Post-Fit or Imported Netlist ;
+;                           ;           ;               ;                    ;                                             ;
++---------------------------+-----------+---------------+--------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                       ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 68             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 103            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 5              ;
+;     -- 5 input functions                    ; 17             ;
+;     -- 4 input functions                    ; 7              ;
+;     -- <=3 input functions                  ; 74             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 86             ;
+;                                             ;                ;
+; I/O pins                                    ; 59             ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 57600          ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Total PLLs                                  ; 1              ;
+;     -- PLLs                                 ; 1              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 63             ;
+; Total fan-out                               ; 1002           ;
+; Average fan-out                             ; 3.01           ;
++---------------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------+
+; Name                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF       ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------+
+; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_m6m1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 19200        ; 3            ; 19200        ; 3            ; 57600 ; black.mif ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Tue Nov 22 18:55:27 2016
+Info: Command: quartus_cdb --read_settings_files=on --write_settings_files=off finalproject2 -c finalproject2 --merge=on --recompile=on
+Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "Top"
+Info (35002): Resolved and merged 1 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: D:/ECE241/finalproject2/db/altpll_80u.tdf Line: 34
+    Info: Must be connected
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[1]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/ECE241/finalproject2/finalproject2.v Line: 20
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/ECE241/finalproject2/finalproject2.v Line: 21
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/ECE241/finalproject2/finalproject2.v Line: 21
+Info (21057): Implemented 217 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 148 logic cells
+    Info (21064): Implemented 9 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Partition Merge was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 962 megabytes
+    Info: Processing ended: Tue Nov 22 18:55:40 2016
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:02
+
+
